@@ -9,7 +9,8 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form" action="">
+    <form class="form" action="/contact/confirm" method="post">
+        @csrf
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">お名前</span>
@@ -32,9 +33,9 @@
             </div>
             <div class="form__group-content">
                 <div class="form-group--text">
-                    <input type="radio" name="gender1">男性
-                    <input type="radio" name="gender2">女性</input>
-                    <input type="radio" name="gender3">その他</input>
+                    <input type="radio" name="option" value="男性">男性</input>
+                    <input type="radio" name="option" value="女性">女性</input>
+                    <input type="radio" name="option" value="その他">その他</input>
                 </div>
             </div>
             <div class="form__error">
@@ -63,11 +64,11 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <input type="text" name="phone" placeholder="080">
+            <input type="text" name="tel1" placeholder="080">
             <span>-</span>
-            <input type="text" name="phone" placeholder="1234">
+            <input type="text" name="tel2" placeholder="1234">
             <span>-</span>
-            <input type="text" name="phone" placeholder="5678">
+            <input type="text" name="tel3" placeholder="5678">
         </div>
         <div class="form__error">
             <!--ヴァリデーション-->
@@ -108,12 +109,12 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <select name="">
-                <option value="">商品のお届けについて</option>
-                <option value="">商品の交換について</option>
-                <option value="">商品トラブル</option>
-                <option value="">ショップへのお問合せ</option>
-                <option value="">その他</option>
+            <select name="content-type">
+                <option value="商品のお届けについて">商品のお届けについて</option>
+                <option value="商品の交換について">商品の交換について</option>
+                <option value="商品トラブル">商品トラブル</option>
+                <option value="ショップへのお問合せ">ショップへのお問合せ</option>
+                <option value="その他">その他</option>
             </select>
         </div>
         <div class="form__error">
@@ -128,7 +129,7 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <textarea name="textarea" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください"></textarea>
+            <textarea name="content" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください"></textarea>
         </div>
         <div class="form__error">
             <!--ヴァリデーション-->

@@ -9,7 +9,7 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
-    <form class="form" action="/contact/confirm" method="post">
+    <form class="form" action="/contacts/confirm" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">
@@ -18,8 +18,8 @@
             </div>
             <div class="form__group-content">
                 <div class="form-group--text">
-                    <input type="text" name="name1" placeholder="コーチ">
-                    <input type="text" name="name2" placeholder="哲久">
+                    <input type="text" name="first_name" placeholder="高知">
+                    <input type="text" name="last_name" placeholder="哲久">
                 </div>
                 <div class="form__error">
                     <!--ヴァリデーション-->
@@ -33,9 +33,9 @@
             </div>
             <div class="form__group-content">
                 <div class="form-group--text">
-                    <input type="radio" name="option" value="男性">男性</input>
-                    <input type="radio" name="option" value="女性">女性</input>
-                    <input type="radio" name="option" value="その他">その他</input>
+                    <input type="radio" name="gender" value="男性">男性</input>
+                    <input type="radio" name="gender" value="女性">女性</input>
+                    <input type="radio" name="gender" value="その他">その他</input>
                 </div>
             </div>
             <div class="form__error">
@@ -129,7 +129,7 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <textarea name="content" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください"></textarea>
+            <textarea name="detail" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください"></textarea>
         </div>
         <div class="form__error">
             <!--ヴァリデーション-->

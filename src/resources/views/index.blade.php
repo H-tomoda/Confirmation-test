@@ -141,5 +141,8 @@
 </div>
 </form>
 </div>
+<div class="attendance__alert">
+    // メッセージ機能
+</div>
 
 @endsection

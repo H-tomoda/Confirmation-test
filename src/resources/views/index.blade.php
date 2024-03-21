@@ -110,6 +110,7 @@
     <div class="form__group-content">
         <div class="form-group--text">
             <select name="content-type">
+                <option value="" selected disabled>選択してください</option>
                 <option value="商品のお届けについて">商品のお届けについて</option>
                 <option value="商品の交換について">商品の交換について</option>
                 <option value="商品トラブル">商品トラブル</option>
@@ -140,9 +141,6 @@
     <button class="form__button-submit" type="submit">確認画面</button>
 </div>
 </form>
-</div>
-<div class="attendance__alert">
-    // メッセージ機能
 </div>
 
 @endsection

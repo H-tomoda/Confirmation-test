@@ -15,6 +15,7 @@ class Contact extends Model
         'email',
         'address',
         'building',
+        'content-type',
         'detail'
     ];
 }

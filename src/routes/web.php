@@ -13,3 +13,4 @@ Route::post('/middleware', [MiddlewareController::class, 'post'])->middleware('t
 Route::middleware('auth')->group(function () {
     Route::get('/', [MemberController::class, 'index']);
 });
+Route::get('/admin', [ContactController::class, 'admin']);

@@ -13,7 +13,7 @@
             <h2>お問合せありがとうございます</h2>
         </div>
         <div class="thanks__button-home">
-            <button class="thanks__button-home--return">HOME</button>
+            <button class="thanks__button-home--return" action="/admin" method="post">HOME</button>
         </div>
     </div>
 </body>

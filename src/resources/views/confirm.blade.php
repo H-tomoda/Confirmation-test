@@ -79,6 +79,9 @@
             <button class="form__button-submit" type="submit">送信</button>
         </div>
     </form>
+    <form action="/">
+        <button class="form__button-return">修正</button>
+    </form>
 </div>
 
 

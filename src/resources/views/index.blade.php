@@ -18,11 +18,16 @@
             </div>
             <div class="form__group-content">
                 <div class="form-group--text">
-                    <input type="text" name="first_name" placeholder="高知">
-                    <input type="text" name="last_name" placeholder="哲久">
+                    <input type="text" name="first_name" placeholder="高知" value="{{ old('first_name') }}" />
+                    <input type="text" name="last_name" placeholder="哲久" value="{{ old('last_name') }}" />
                 </div>
                 <div class="form__error">
-                    <!--ヴァリデーション-->
+                    @error('first_name')
+                    {{$message}}
+                    @enderror
+                    @error('last_name')
+                    {{$message}}
+                    @enderror
                 </div>
             </div>
         </div>
@@ -39,7 +44,9 @@
                 </div>
             </div>
             <div class="form__error">
-                <!--ヴァリデーション-->
+                @error('gender')
+                {{$message}}
+                @enderror
             </div>
         </div>
 </div>
@@ -50,10 +57,12 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <input type="text" name="email" placeholder="test@example.com">
+            <input type="text" name="email" placeholder="test@example.com" value="{{ old('email') }}">
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
+            @error('email')
+            {{$message}}
+            @enderror
         </div>
     </div>
 </div>
@@ -64,14 +73,22 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <input type="text" name="tel1" placeholder="080">
+            <input type="text" name="tel1" placeholder="080" value="{{ old('tel1') }}">
             <span>-</span>
-            <input type="text" name="tel2" placeholder="1234">
+            <input type="text" name="tel2" placeholder="1234" value="{{ old('tel2') }}">
             <span>-</span>
-            <input type="text" name="tel3" placeholder="5678">
+            <input type="text" name="tel3" placeholder="5678" value="{{ old('tel3') }}">
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
+            @error('tel1')
+            {{$message}}
+            @enderror
+            @error('tel2')
+            {{$message}}
+            @enderror
+            @error('tel3')
+            {{$message}}
+            @enderror
         </div>
     </div>
 </div>
@@ -82,10 +99,12 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <input type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3">
+            <input type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}">
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
+            @error('address')
+            {{$message}}
+            @enderror
         </div>
     </div>
 </div>
@@ -95,10 +114,9 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <input type="text" name="building" placeholder="千駄ヶ谷マンション101">
+            <input type="text" name="building" placeholder="千駄ヶ谷マンション101" value="{{ old('building') }}">
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
         </div>
     </div>
 </div>
@@ -119,7 +137,9 @@
             </select>
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
+            @error('content-type')
+            {{$message}}
+            @enderror
         </div>
     </div>
 </div>
@@ -130,10 +150,12 @@
     </div>
     <div class="form__group-content">
         <div class="form-group--text">
-            <textarea name="detail" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください"></textarea>
+            <textarea name="detail" cols="80" rows="10" placeholder="お問い合わせ内容をご記載ください" value="{{ old('detail') }}"></textarea>
         </div>
         <div class="form__error">
-            <!--ヴァリデーション-->
+            @error('detail')
+            {{$message}}
+            @enderror
         </div>
     </div>
 </div>

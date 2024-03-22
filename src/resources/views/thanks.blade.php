@@ -12,9 +12,9 @@
         <div class="thanks__heading">
             <h2>お問合せありがとうございます</h2>
         </div>
-        <div class="thanks__button-home">
-            <button class="thanks__button-home--return" action="/admin" method="post">HOME</button>
-        </div>
+        <form class="thanks__button" action="/">
+            <button class="thanks__button-home">Home</button>
+        </form>
     </div>
 </body>
 

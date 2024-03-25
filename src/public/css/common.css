@@ -1,24 +1,26 @@
 .header {
-    background: #000;
+    background: #FFFFFF;
 }
 
 .header__inner {
     margin: 0 auto;
     padding: 20px 15px;
-    max-width: 1230px;
+    max-width: 1512px;
+    height: 100px;
+}
+.header-utilities {
+    text-align: center;
 }
 
-.header-utilities {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .header__logo {
-    color: #fff;
+    color: #8B7969;
     text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
+    font-family: Inika;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52.12px;
 }
 
 .header-utilities nav {
@@ -37,9 +39,9 @@
 }
 
 .header-nav__button {
-    border: none;
+    border: wheat;
     background: transparent;
-    color: #fff;
     font-size: 16px;
     cursor: pointer;
+    border: 1px solid rgba(217, 198, 181, 1)
 }

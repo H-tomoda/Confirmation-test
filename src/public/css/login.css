@@ -1,3 +1,7 @@
+.login__content {
+    background: rgba(241, 236, 231, 1);
+}
+
 .login-form__content {
     margin: 0 auto;
     padding: 30px 15px;
@@ -5,8 +9,19 @@
 }
 
 .login-form__heading {
-    margin-bottom: 20px;
+    color: #8B7969;
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 1230px;
+    height: 200px;
     text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45.61px;
+    font-family: ;
+}
+h2 {
+        
 }
 
 .form {
@@ -46,15 +61,19 @@
 .form__button-submit {
     padding: 10px;
     width: 30%;
-    height: 50px;
+    height: 30px;
     border: none;
     border-radius: 3px;
-    background: #000;
-    color: #fff;
+    background: #82756A;
+    color: #e5c9c9;
     cursor: pointer;
+    font-family: Inika;
 }
 
 .register__link {
     margin-top: 20px;
     text-align: center;
 }
+
+
+

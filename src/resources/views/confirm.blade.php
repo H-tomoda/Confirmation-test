@@ -64,7 +64,7 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問合せ種類</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="content-type" value="{{$contact['content-type']}}" readonly />
+                        <input type="text" name="category_id" value="{{$contact['category_id']}}" readonly />
                     </td>
                 </tr>
                 <tr class="confirm-table__row">

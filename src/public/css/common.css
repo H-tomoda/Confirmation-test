@@ -29,13 +29,9 @@
 
 .header-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-nav__link {
-    color: #fff;
-    text-decoration: none;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: right;
 }
 
 .header-nav__button {

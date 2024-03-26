@@ -125,8 +125,15 @@
         <span class="form__label--item">お問合せの種類</span>
         <span class="form__label--required">※</span>
     </div>
-    <div class="form__group-content">
-        <div class="form-group--text">
+    <div class="create-form__item">
+        <select class="create-form__item-select" name="category_id">
+            <option value="" selected disabled disabled>選択してください</option>
+            @foreach ($categories as $category)
+            <option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+            @endforeach
+        </select>
+    </div>
+    <!--div class="form-group--text">
             <select name="content-type">
                 <option value="" selected disabled>選択してください</option>
                 <option value="商品のお届けについて">商品のお届けについて</option>
@@ -135,12 +142,11 @@
                 <option value="ショップへのお問合せ">ショップへのお問合せ</option>
                 <option value="その他">その他</option>
             </select>
-        </div>
-        <div class="form__error">
-            @error('content-type')
-            {{$message}}
-            @enderror
-        </div>
+        </!--div-->
+    <div class="form__error">
+        @error('category__id')
+        {{$message}}
+        @enderror
     </div>
 </div>
 <div class="form__group">

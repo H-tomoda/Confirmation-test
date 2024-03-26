@@ -16,18 +16,17 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender');
             $table->string('email');
             $table->string('address');
             $table->string('building')->nullable();
-            $table->string('content-type');
             $table->text('detail');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

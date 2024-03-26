@@ -5,11 +5,7 @@
 @endsection
 
 @section('content')
-<div class="confirm__contact">
-    <div class="confirm__heading">
-        <h2>Admin</h2>
-    </div>
-</div>
+
 <?php
 try {
     $pdo = new PDO(
@@ -30,31 +26,29 @@ try {
     die('接続エラー：' . $Exception->getMessage());
 }
 ?>
-<table>
-    <tbody>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>苗字</th>
+        <th>名前</th>
+        <th>性別</th>
+        <th>メールアドレス</th>
+        <th>問い合わせ内容の種類</th>
+    </tr>
+    <?php
+    while ($row = $stmh->fetch(PDO::FETCH_ASSOC)) {
+    ?>
         <tr>
-            <th>ID</th>
-            <th>苗字</th>
-            <th>名前</th>
-            <th>性別</th>
-            <th>メールアドレス</th>
-            <th>問い合わせ内容の種類</th>
+            <th><?= htmlspecialchars($row['id']) ?></th>
+            <th><?= htmlspecialchars($row['first_name']) ?></th>
+            <th><?= htmlspecialchars($row['last_name']) ?></th>
+            <th><?= htmlspecialchars($row['gender']) ?></th>
+            <th><?= htmlspecialchars($row['email']) ?></th>
+            <th><?= htmlspecialchars($row['category_id']) ?></th>
         </tr>
-        <?php
-        while ($row = $stmh->fetch(PDO::FETCH_ASSOC)) {
-        ?>
-            <tr>
-                <th><?= htmlspecialchars($row['id']) ?></th>
-                <th><?= htmlspecialchars($row['first_name']) ?></th>
-                <th><?= htmlspecialchars($row['last_name']) ?></th>
-                <th><?= htmlspecialchars($row['gender']) ?></th>
-                <th><?= htmlspecialchars($row['email']) ?></th>
-                <th><?= htmlspecialchars($row['content-type']) ?></th>
-            </tr>
-        <?php
-        }
-        $pdo = null;
-        ?>
-    </tbody>
+    <?php
+    }
+    $pdo = null;
+    ?>
 </table>
 @endsection

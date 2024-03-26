@@ -29,9 +29,9 @@ Laravel環境構築
 
 使用技術
 
-・PHP　8.0
+・PHP　8.3.2
 
-・Laravel　10.0
+・Laravel Framework 8.83.27
 
 ・MYSQL　8.0
 
